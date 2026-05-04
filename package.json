@@ -1,0 +1,24 @@
+{
+  "name": "repokosha-ai",
+  "version": "1.0.0",
+  "description": "RepoKosha AI is an AI-powered codebase knowledge engine for repository Q&A, architecture insights, risk scanning, documentation, and implementation planning.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "rag",
+    "codebase-ai",
+    "developer-tools",
+    "repository-analysis",
+    "full-stack",
+    "placement-project"
+  ],
+  "author": "Ram Roop Sharma",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}
