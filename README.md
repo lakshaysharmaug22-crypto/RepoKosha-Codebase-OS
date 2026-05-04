@@ -112,13 +112,6 @@ Codebase Input
   -> Developer Dashboard
 ```
 
-## Placement Resume Description
-
-Built RepoKosha AI, a full-stack AI/RAG developer tool that indexes software repositories and provides codebase Q&A with citations, architecture insights, implementation planning, documentation drafts, and risk scanning. Implemented ZIP ingestion, GitHub import, local retrieval over source chunks, and a polished dashboard for engineering workflows.
-
-## Application Form Description
-
-RepoKosha AI is a full-stack AI/RAG platform for software engineers that converts any repository into an interactive knowledge base. It supports ZIP upload, GitHub import, codebase Q&A with citations, architecture mapping, implementation planning, documentation generation, and risk scanning through a polished developer dashboard.
 
 ## Future Improvements
 
@@ -132,4 +125,4 @@ RepoKosha AI is a full-stack AI/RAG platform for software engineers that convert
 
 ## Author
 
-Ram Roop Sharma
+LAKSHAY SHARMA
