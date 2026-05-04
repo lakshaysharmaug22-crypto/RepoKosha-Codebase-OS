@@ -2,23 +2,23 @@ import { createServer } from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
-import { parseZipBuffer } from "./server/lib/zip.js";
+import { parseZipBuffer } from "./zip.js";
 import {
   createProjectFromFiles,
   getProject,
   listProjects,
   scanDirectory,
-} from "./server/lib/projects.js";
+} from "./projects.js";
 import {
   answerQuestion,
   buildArchitecture,
   buildDocs,
   buildPlan,
   buildRiskReport,
-} from "./server/lib/insights.js";
+} from "./insights.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
-const publicDir = join(__dirname, "public");
+const publicDir = __dirname;
 const port = Number(process.env.PORT || 8080);
 
 const mimeTypes = {

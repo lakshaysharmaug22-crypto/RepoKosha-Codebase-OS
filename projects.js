@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import { buildSearchIndex, tokenize } from "./search.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const rootDir = join(__dirname, "..", "..");
+const rootDir = __dirname;
 const dataDir = join(rootDir, "data");
 const storePath = join(dataDir, "projects.json");
 
