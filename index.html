@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="RepoKosha AI is a codebase RAG assistant and AI operating system for software engineers."
+    />
+    <title>RepoKosha AI</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">RK</div>
+          <div>
+            <h1>RepoKosha AI</h1>
+            <p>Codebase knowledge engine</p>
+          </div>
+        </div>
+
+        <nav class="nav-tabs" aria-label="Workspace sections">
+          <button class="nav-tab active" data-view="chat">Ask</button>
+          <button class="nav-tab" data-view="architecture">Map</button>
+          <button class="nav-tab" data-view="planner">Plan</button>
+          <button class="nav-tab" data-view="docs">Docs</button>
+          <button class="nav-tab" data-view="risks">Risks</button>
+        </nav>
+
+        <section class="ingest-panel">
+          <h2>Index Codebase</h2>
+          <button id="selfScanBtn" class="primary-btn">Analyze RepoKosha</button>
+          <label class="file-drop">
+            <input id="zipInput" type="file" accept=".zip" />
+            <span>Upload ZIP</span>
+          </label>
+          <form id="githubForm" class="github-form">
+            <input id="githubUrl" type="url" placeholder="GitHub repo URL" />
+            <button type="submit">Import</button>
+          </form>
+        </section>
+
+        <section class="project-panel">
+          <div class="section-title">
+            <h2>Projects</h2>
+            <button id="refreshProjects" title="Refresh projects">↻</button>
+          </div>
+          <div id="projectList" class="project-list"></div>
+        </section>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">AI OS for software engineers</p>
+            <h2 id="projectTitle">No project indexed yet</h2>
+          </div>
+          <div class="stats" id="stats"></div>
+        </header>
+
+        <section class="hero-band">
+          <div>
+            <p>Turn repositories into searchable knowledge, architecture maps, engineering plans, docs, and risk reports.</p>
+          </div>
+          <button id="quickDemoBtn">Run instant demo</button>
+        </section>
+
+        <section id="chatView" class="view active">
+          <div class="chat-layout">
+            <div class="chat-panel">
+              <div id="messages" class="messages">
+                <div class="assistant-message">
+                  Ask about architecture, APIs, auth, risk areas, or which files to edit for a feature.
+                </div>
+              </div>
+              <form id="chatForm" class="composer">
+                <input
+                  id="questionInput"
+                  type="text"
+                  placeholder="Where should I start to add authentication?"
+                />
+                <button type="submit">Ask</button>
+              </form>
+            </div>
+            <div class="citation-panel">
+              <h3>Citations</h3>
+              <div id="citations" class="citation-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="architectureView" class="view">
+          <div id="architectureOutput" class="insight-grid"></div>
+        </section>
+
+        <section id="plannerView" class="view">
+          <form id="planForm" class="planner-form">
+            <input id="featureInput" type="text" placeholder="Add payment flow with order history" />
+            <button type="submit">Generate Plan</button>
+          </form>
+          <div id="planOutput" class="insight-list"></div>
+        </section>
+
+        <section id="docsView" class="view">
+          <div id="docsOutput" class="doc-output"></div>
+        </section>
+
+        <section id="risksView" class="view">
+          <div id="risksOutput" class="risk-output"></div>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
